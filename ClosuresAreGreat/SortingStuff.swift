@@ -18,7 +18,31 @@ struct ToyBin {
     
     // TODO: Implement all of the sort functions (lets organize this toy bin!)
     
- 
+    mutating func sortShips() {
+        self.ships = self.ships.sorted { return $0.name == "Titanic" ? true : $0.age > $1.age }
+    }
+    
+    mutating func sortBooks() {
+        self.books = self.books.sorted { $0.name < $1.name }
+    }
+    
+    mutating func sortBowlingPins() {
+            self.bowlingPins = self.bowlingPins.sorted { $0.color.rawValue < $1.color.rawValue }
+    }
+    
+    mutating func sortMusicCDs() {
+        self.musicCDs = self.musicCDs.sorted { return $0.name == "Drake" ?  true : $0.name < $1.name }
+    }
+    
+    mutating func changeColorOfAllPins(to color: Color) {
+        self.bowlingPins = self.bowlingPins.map {
+            var pin = $0
+            pin.color = color
+            return pin
+        }
+    }
+    
+    
 }
 
 

@@ -96,7 +96,7 @@ class ClosuresAreGreatTests: XCTestCase {
         XCTAssertEqual(lastCD?.name, weeknd.name)
         
     }
-    
+
     
     func testChangeColorOfAllPins() {
         var toyBin = ToyBin()
