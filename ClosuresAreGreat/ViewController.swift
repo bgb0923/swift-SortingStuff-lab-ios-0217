@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     }
     
     func performOperation(with numbers: Double..., operation: (Double,Double) -> Double) -> Double {
-        return numbers.reduce(0) { $0 + $1 }
+        let x = numbers[0]
+        let numbers = numbers.dropFirst()
+        return numbers.reduce(x, operation)
     }
 }

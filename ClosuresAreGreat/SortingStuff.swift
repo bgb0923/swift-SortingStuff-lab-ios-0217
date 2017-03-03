@@ -41,10 +41,7 @@ struct ToyBin {
             return pin
         }
     }
-    
-    
 }
-
 
 struct Ship {
     var name: String

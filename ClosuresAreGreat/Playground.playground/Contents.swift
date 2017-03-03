@@ -1,4 +1,35 @@
-var array = [6,4,7,9,4,2,3,7,9,8,45,3,2,4,5,8,7,5,3,5,7,8,]
 
-print(array.sorted{$0 > $1})
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+func performOperation(with numbers: Double..., operation: (Double,Double) -> Double) -> Double {
+    let x = numbers[0]
+    let numbers = numbers.dropFirst()
+    return numbers.reduce(x, operation)
+}
+
+print(performOperation(with: 5, 2, -9) {$0 - $1})
